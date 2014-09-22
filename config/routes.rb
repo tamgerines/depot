@@ -17,7 +17,7 @@ Rails.application.routes.draw do
     get :who_bought, on: :member
   end
   
-  get ':action' => 'static#:action'
+  get 'static/:action' => 'static#:action'
   
   scope '(:locale)' do
     resources :orders
